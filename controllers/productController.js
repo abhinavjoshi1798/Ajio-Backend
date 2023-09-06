@@ -68,7 +68,7 @@ const addProduct = async (req, res) => {
   const { image, brand, name, price, category, quantity } = req.body;
   const token = req.headers.authorization;
   try {
-    const decoded = jwt.verify(token, process.env.Secretkey);
+    const decoded = jwt.verify(token, process.env.SecretKey);
     const product = new ProductModel({
       image,
       brand,
